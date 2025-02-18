@@ -8,7 +8,15 @@ def batch_badge_creator(names):
     return new_list
 
 def assign_rooms(names):
-    return None
+    new_list = []
+    for name in names:
+        room_number = names.index(name)
+        new_list.append(f"Hello, {name}! You'll be assigned to room {room_number+1}!")
+    return new_list
 
 def printer(names):
-    return None
+    for badge in batch_badge_creator(names):
+        print(badge)
+    
+    for assignment in assign_rooms(names):
+        print(assignment)
